@@ -77,11 +77,56 @@ body {
     display: flex;
     gap: 1rem;
 }
+.box { ... }
 
-/* Les boîtes que nous allons animer */
-.box {
-    width: 60px;
-    height: 60px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
+/* Par ceci : */
+.animation-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-animation {
+    /* Taille de notre animation */
+    width: 100%;
+    max-width: 400px; /* Ajustez au besoin */
+    overflow: visible; /* Important pour les effets */
+}
+
+/* Style de base pour tous les "path" (formes) */
+.hero-animation path {
+    fill: rgba(255, 255, 255, 0.05); /* Remplissage très léger */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ----- Les Anneaux ----- */
+.ring {
+    fill: none; /* Pas de remplissage */
+    stroke-width: 4;
+}
+
+/* Couleurs des anneaux (comme sur l'original) */
+.rings-group path:nth-child(1) { stroke: #4CAF50; } /* Vert */
+.rings-group path:nth-child(2) { stroke: #8BC34A; } /* Vert clair */
+.rings-group path:nth-child(3) { stroke: #FFC107; } /* Jaune */
+.rings-group path:nth-child(4) { stroke: #FF9800; } /* Orange */
+.rings-group path:nth-child(5) { stroke: #F44336; } /* Rouge */
+.rings-group path:nth-child(6) { stroke: #E91E63; } /* Rose */
+
+
+/* ----- La Vague ----- */
+#wave-path {
+    fill: #F44336; /* Remplissage rouge */
+    opacity: 0.7;
+    stroke: none; /* Pas de contour */
+}
+
+#wave-dots {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    /* C'est ce qui crée les pointillés ! */
+    stroke-dasharray: 2 4; /* 2px de trait, 4px d'espace */
 }
