@@ -1,4 +1,16 @@
-.logo.js {
-  width: 150%;
-  height: 150%;
+/* Style de base pour la page */
+body {
+    font-family: system-ui, sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* L'élément à animer */
+.mon-element {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4757; /* Une couleur vive */
+    border-radius: 12px;
 }
